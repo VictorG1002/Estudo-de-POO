@@ -1,18 +1,17 @@
 import { Cliente } from './Cliente.js'
 import { ContaCorrente } from './ContaCorrente.js'
 import { ContaPoupanca } from './ContaPoupanca.js'
-import { Empresarial } from './Empresarial.js'
-import { Conta } from './Conta.js'
 
-const Cliente1 = new Cliente('yeda', '57036740')
-const Cliente2 = new Cliente('victor', '08367852400')
+const ContaC1 = new ContaCorrente(1000, '001')
+const ContaP1 = new ContaPoupanca(0, '001')
 
-const ContaCorrente1 = new ContaCorrente(1000, '001', Cliente1)
+const ContaC2 = new ContaCorrente(1000, '001')
+const ContaP2 = new ContaPoupanca(0, '001')
 
-const ContaCorrente2 = new ContaCorrente(500, '002', Cliente2)
+const Cliente1 = new Cliente(ContaC1, ContaP1, 'yeda', '57036740')
+const Cliente2 = new Cliente(ContaC2, ContaP2, 'victor', '08367852400')
 
-const Conta1 = new ContaCorrente(1000, '001', Cliente1)
-const Conta2 = new ContaPoupanca(500, '003', Cliente2)
-const Conta3 = new Empresarial(500, '004', Cliente)
+ContaP2.depositar(1000)
 
-console.log(Conta2)
+console.log(Cliente1)
+console.log(Cliente2)

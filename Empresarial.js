@@ -9,6 +9,6 @@ export class Empresarial extends Conta {
   }
 
   imprimirSaldo() {
-    console.log(this.saldo * 3)
+    console.log(this._saldo * 3)
   }
 }

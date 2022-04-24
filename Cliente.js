@@ -1,5 +1,7 @@
 export class Cliente {
-  constructor(nome, cpf) {
+  constructor(contac, contap, nome, cpf) {
+    this.conta = contac
+    this.contap = contap
     this.nome = nome
     this.cpf = cpf
   }

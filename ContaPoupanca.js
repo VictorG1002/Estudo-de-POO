@@ -1,8 +1,8 @@
 import { Conta } from './Conta.js'
 
 export class ContaPoupanca extends Conta {
-  constructor(saldo, agencia, cliente) {
-    super(saldo, agencia, cliente)
+  constructor(saldo, agencia) {
+    super(saldo, agencia)
   }
 
   depositar(valorParaDeposito) {
@@ -11,9 +11,8 @@ export class ContaPoupanca extends Conta {
     } else {
       this.saldo += valorParaDeposito
       console.log(
-        `Dinheiro depositado com sucesso, Seu saldo eh de ${this.saldo}`
+        `Dinheiro depositado na conta poupanca com sucesso! ${this.saldo}`
       )
-      return valorParaDeposito
     }
   }
 }
